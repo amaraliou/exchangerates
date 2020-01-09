@@ -16,6 +16,7 @@ GET /rates?base=XXX | Returns the latest EUR conversion rate with the given curr
 ## How to run
 
 - Clone this repo with `git clone https://github.com/amaraliou/exchangerates` and `cd` into it;
+- Run `go mod download` on the terminal;
 - Run `make run` on the terminal;
 - Go to `localhost:8080` to test the endpoints.
 
