@@ -18,7 +18,8 @@ type Server struct {
 func (server *Server) Initialize() {
 
 	server.Router = mux.NewRouter()
-	// If we were to extend to multiple routes, I'd create another file routes.go with a function to initialize the routes
+	// If we were to extend to more routes, I'd create another file routes.go with a function to initialize the routes
+	server.Router.HandleFunc("/", middlewares.SetMiddlewareJSON(Home)).Methods("GET")
 	server.Router.HandleFunc("/rates", middlewares.SetMiddlewareJSON(GetExchangeRate)).Methods("GET")
 }
 
